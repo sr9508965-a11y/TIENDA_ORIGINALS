@@ -1,0 +1,178 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/*AquÃ­ personalizo la fuente de la pÃ¡gina y el color de fondo*/
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: color #fff1d3;;
+}
+
+/*Aqui personalizo la cabereza o menu de navegaciÃ³n*/
+header{
+    background-color:#77ff00;
+    color: rgb(117, 199, 91);
+    text-align: center;
+}
+#menu{
+    list-style:none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 30px;
+
+}
+#menu a {
+    text-decoration: none;
+    color: white;
+    background-color: #000000;
+    padding: 15px 30px;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+#menu a:hover{
+    background-color:#ffcb62;
+}
+
+/*Aqui voy a personalizar el cuerpo de mi pagina */
+#contenedor{
+    display: flex;
+    min-height: 500px;
+    min-height: 100vh;
+}
+#publicidad1{
+    width: 20%;
+    background-color: hsl(110, 71%, 57%);
+}
+#contenido{
+    width: 60%;
+    background-color: white;
+    padding: 20px;
+}
+#publicidad2{
+    width: 20%;
+    background-color: #59d53d;
+}
+iframe{
+    width: 100%;
+    height: 100%;
+    border: 2px solid white;
+    border-radius: 20px;
+}
+footer{
+    background-color:#5facd3;
+    color: white;
+    text-align: center;
+    padding: 80px;
+}
+/* AQUI PERSONALIZO PRODUCTOS  */
+#galeria_prod{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    justify-content: center;
+    gap: 20px;
+}
+.productos{
+    background-color: #82df37;
+    max-width: 300px;
+    padding: 20px;
+    border-radius: 20px;
+   
+}
+.productos img{
+    width: 100%;
+    border-radius: 10px;
+}
+.productos:hover{
+ box-shadow: 0px 5px 10px;
+    transition: 0.5s;
+}
+button{
+    padding: 10px;
+background-color: #525EA7;
+color: rgb(221, 206, 52);
+border: none;
+border-radius: 4px;
+}
+button:hover{
+    background-color: #6b79d3;
+}
+/*AQUI PERSONALIZO SERVICIOS*/
+#servicios_prd{
+    display: grid;
+}
+/*AquÃ­ personalizo contacto*/
+form{
+    max-width: 400px;
+    margin: auto;
+    text-align: left;
+}
+.contacto{
+    width: 100%;
+    background-color: #24d135;
+}
+input, textarea{
+    width: 100%;
+    border: 30px;
+    border-radius: 15px;
+}
+#hamburguesa{
+    font-size: 30px;
+    cursor: pointer;
+    display: none;
+}
+#aactivadomenu{
+    display: none;
+}
+
+/* AQUI PERSONALIZO MI PAGINA PARA QUE SE ADAPTE A OTROS DISPOSITIVOS*/
+@media (max-width: 750px){
+    #menu{
+        flex-direction: column;
+        gap: 1px;
+        padding: 0px;
+    }
+    #menu a{
+        display: flex;
+        justify-content: center;
+    }
+    #contenedor{
+        flex-direction: column;
+        text-align: center;
+    }
+    #publicidad1, #contenido, #publicidad2{
+        width: 100%;
+    }
+    #publicidad1 img{
+        width: 15px;
+    }
+        #publicidad2 img{
+        width: 15px;
+
+    }
+    iframe{
+    height: 900px;
+    
+    }
+    #galeria_prod{
+    grid-template-columns: repeat(1,auto);
+    }
+#hamburguesa{
+    display: block
+}
+#activadomenu:checked + #hamburguesa + menu {
+    display: flex;
+}
+}
+.portada img{
+    width: 98%;
+}
+#publicidad2{
+ width: 20%;
+ background-color: #24d135;
+}
+#servicio_prd{
+    display: grid;
+}
